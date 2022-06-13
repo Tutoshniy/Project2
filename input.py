@@ -21,9 +21,9 @@ def number_input():
                 print('Вы ввели недопустимый символ, попробуйте снова ')    
 
 def library_fill(card): #card - карточка абонента
-    with open('library.csv', 'a', encoding='utf_8') as lib:
-        csv.register_dialect('my_dialect', delimiter='|', lineterminator="\r\n")
-        writer = csv.writer(lib, 'my_dialect')
-        writer.writerow(card)
-card = ['Иванов','Иван','Иванович','8800123','личный']   
-library_fill(card)
+        with open('library.csv', 'a', encoding='utf_8') as lib:
+            csv.register_dialect('my_dialect', delimiter='|', lineterminator="\r\n")
+            writer = csv.writer(lib, 'my_dialect')
+            writer.writerow(card)
+
+
