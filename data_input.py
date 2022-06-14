@@ -2,14 +2,14 @@ import csv
 from encodings import utf_8
 
 def name_input():
-    symbols = "!'@#$%^&*()`/:;.,?<>\|'""+ -=[]}{"
+    symbols = "!'@#$%^&*()`/:;.,?<>\|'""+-=[]}{"
     obj = input('Введите ФИО абонента в формате Иванов Иван Иванович: ')
     while True:
         for char in obj:
-            if char.isdigit() or char.isalnum() or char in symbols:
-                return obj
-            else:
+            if char.isdigit() or char in symbols:
                 print('Вы ввели недопустимый символ, попробуйте снова')    
+            else:
+                return obj
 
 def number_input():
     obj = input('Введите номер абонента в формате 8800123: ')
@@ -30,3 +30,4 @@ def card_creator():
     card = input("Введите данные строго в формате -> Фамилия Имя Отчество Номер телефона Тип номера: ")
     card = card.split()
     return card
+

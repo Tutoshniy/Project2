@@ -2,10 +2,11 @@ import data_input
 
 def function_select():
     func_select = input('Выберите режим работы:\
-        1. Поиск абонента или номера телефона\
-        2. Редактор справочника\
-        3. Выход ')    
-    if not func_select.isdigit() and int(func_select)<1 or int(func_select)>3: 
+ 1. Поиск абонента или номера телефона\
+ 2. Редактор справочника\
+ 3. Открыть справочник\
+ 4. Выход ')    
+    if not func_select.isdigit() and int(func_select)<1 or int(func_select)>4: 
         print('Вы ввели недопустимое значение, попробуйте снова ')
         func_select = function_select()       
     else:
